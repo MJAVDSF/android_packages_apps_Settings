@@ -103,6 +103,12 @@
             android:title="@string/screen_animation_off_title"
             android:defaultValue="true" />
 
+        <PreferenceScreen
+            android:id="@+id/animations"
+            android:title="@string/title_animation_controls"
+            android:summary="@string/header_summary_animation"
+            android:fragment="com.android.settings.cyanogenmod.fragments.AnimationControls" />
+
         <ListPreference
             android:key="screen_animation_style"
             android:title="@string/screen_animation_style_title"
