@@ -46,6 +46,11 @@
             android:entryValues="@array/toast_animation_values"
             android:persistent="false" />
 
+    <PreferenceScreen
+        android:key="app_sidebar"
+        android:fragment="com.android.settings.pac.AppSidebar"
+        android:title="@string/app_sidebar_title"/>
+
     <PreferenceCategory
             android:key="expanded_desktop_category"
             android:title="@string/power_menu_expanded_desktop" >
