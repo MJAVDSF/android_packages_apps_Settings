@@ -111,4 +111,9 @@
 
     </PreferenceCategory>
 
+    <CheckBoxPreference
+        android:key="lockscreen_torch"
+        android:title="@string/lockscreen_glowpad_torch_title"
+        android:summary="@string/lockscreen_glowpad_torch_summary" />
+
 </PreferenceScreen>
