@@ -66,6 +66,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
     private static final String LOCKSCREEN_BACKGROUND_STYLE = "lockscreen_background_style";
     private static final String KEY_LOCKSCREEN_MODLOCK_ENABLED = "lockscreen_modlock_enabled";
+    private static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
 
     private static final String LOCKSCREEN_WALLPAPER_TEMP_NAME = ".lockwallpaper";
 
@@ -76,6 +77,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private CheckBoxPreference mEnableModLock;
     private ListPreference mLockBackground;
     private ListPreference mBatteryStatus;
+    private CheckBoxPreference mLockBeforeUnlock;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
     private LockPatternUtils mLockUtils;
@@ -121,6 +123,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         checkDisabledByPolicy(mEnableKeyguardWidgets,
                 DevicePolicyManager.KEYGUARD_DISABLE_WIDGETS_ALL);
 
+        // Lock before Unlock
+        mLockBeforeUnlock = (CheckBoxPreference) findPreference(LOCK_BEFORE_UNLOCK);
+        
         // Enable or disable camera widget based on device and policy
         if (Camera.getNumberOfCameras() == 0) {
             widgetsCategory.removePreference(mEnableCameraWidget);
@@ -210,6 +215,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         } else if (KEY_ENABLE_CAMERA.equals(key)) {
             mLockUtils.setCameraEnabled(mEnableCameraWidget.isChecked());
             return true;
+        } else if (preference == mLockBeforeUnlock) {
+            Settings.Secure.putInt(getContentResolver(), Settings.Secure.LOCK_BEFORE_UNLOCK,
+                    mLockBeforeUnlock.isChecked() ? 1 : 0);
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
