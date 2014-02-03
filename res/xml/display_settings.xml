@@ -93,16 +93,21 @@
             android:title="@string/double_tap_to_wake_title"
             android:defaultValue="false" />
 
+        <PreferenceScreen
+            android:id="@+id/animations"
+            android:title="@string/title_animation_controls"
+            android:summary="@string/header_summary_animation"
+            android:fragment="com.android.settings.cyanogenmod.fragments.AnimationControls" />
+
         <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
             android:key="screen_off_animation"
             android:title="@string/screen_animation_off_title"
             android:defaultValue="true" />
 
         <PreferenceScreen
-            android:id="@+id/animations"
-            android:title="@string/title_animation_controls"
-            android:summary="@string/header_summary_animation"
-            android:fragment="com.android.settings.cyanogenmod.fragments.AnimationControls" />
+            android:key="progressbar_settings"
+            android:fragment="com.android.settings.cyanogenmod.ProgressBar"
+            android:title="@string/progressbar_title" >
 
         <ListPreference
             android:key="screen_animation_style"
