@@ -39,6 +39,13 @@
         android:fragment="com.android.settings.crdroid.RecentPanelSettings"
         android:title="@string/recent_panel_settings_title" />
 
+    <ListPreference
+            android:key="toast_animation"
+            android:title="@string/toast_animation_title"
+            android:entries="@array/toast_animation_entries"
+            android:entryValues="@array/toast_animation_values"
+            android:persistent="false" />
+
     <PreferenceCategory
             android:key="expanded_desktop_category"
             android:title="@string/power_menu_expanded_desktop" >

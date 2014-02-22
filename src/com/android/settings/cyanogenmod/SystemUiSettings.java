@@ -28,6 +28,7 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.WindowManagerGlobal;
+import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -43,6 +44,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private static final String CATEGORY_NAVBAR = "navigation_bar";
     private static final String KEY_SCREEN_GESTURE_SETTINGS = "touch_screen_gesture_settings";
     private static final String KEY_NAVIGATION_BAR_LEFT = "navigation_bar_left";
+    private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
     // Enable/disable nav bar	
     private static final String ENABLE_NAVIGATION_BAR = "enable_nav_bar";
@@ -54,6 +56,7 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
     private static final String KEY_HOME_ENABLED = "key_home_enabled";
 
     private ListPreference mExpandedDesktopPref;
+    private ListPreference mToastAnimation;
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
     private CheckBoxPreference mNavigationBarLeftPref;
     // Enable/disable hardware keys
@@ -111,6 +114,13 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         mEnableNavigationBar = (CheckBoxPreference) findPreference(ENABLE_NAVIGATION_BAR);
         mEnableNavigationBar.setChecked(enableNavigationBar);
         mEnableNavigationBar.setOnPreferenceChangeListener(this);
+
+        mToastAnimation = (ListPreference)findPreference(KEY_TOAST_ANIMATION);
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        int CurrentToastAnimation = Settings.System.getInt(getContentResolver(), Settings.System.TOAST_ANIMATION, 1);
+        mToastAnimation.setValueIndex(CurrentToastAnimation);
+        mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
+        mToastAnimation.setOnPreferenceChangeListener(this);
    
         // Enable/disable hardware keys
         mMenuKeyEnabled = (CheckBoxPreference) findPreference(KEY_MENU_ENABLED);
@@ -171,6 +181,12 @@ public class SystemUiSettings extends SettingsPreferenceFragment  implements
         } else if (preference == mExpandedDesktopNoNavbarPref) {
             value = (Boolean) objValue;
             updateExpandedDesktop(value ? 2 : 0);
+            return true;
+        } else if (preference == mToastAnimation) {
+            int index = mToastAnimation.findIndexOfValue((String) objValue);
+            Settings.System.putString(getContentResolver(), Settings.System.TOAST_ANIMATION, (String) objValue);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
             return true;
 	// Enable/disbale nav bar (used in custom nav bar dimensions)
 	} else if (preference == mEnableNavigationBar) {
