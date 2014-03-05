@@ -29,10 +29,13 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.hardware.DisplayColor;
 import com.android.settings.hardware.DisplayGamma;
 import com.android.settings.hardware.VibratorIntensity;
+import com.android.settings.Utils;
 
 public class MoreDeviceSettings extends SettingsPreferenceFragment {
     private static final String TAG = "MoreDeviceSettings";
 
+    private static final String KEY_ADVANCED_SETTINGS = "advanced_settings";
+    private static final String KEY_ADVANCED_SETTINGS_CATEGORY = "advanced_settings_category";
     private static final String KEY_SENSORS_MOTORS_CATEGORY = "sensors_motors_category";
     private static final String KEY_DISPLAY_CALIBRATION_CATEGORY = "display_calibration_category";
     private static final String KEY_DISPLAY_COLOR = "color_calibration";
@@ -44,6 +47,17 @@ public class MoreDeviceSettings extends SettingsPreferenceFragment {
 
         addPreferencesFromResource(R.xml.more_device_settings);
         ContentResolver resolver = getContentResolver();
+
+        final PreferenceGroup advancedsettingsCategory =
+                (PreferenceGroup) findPreference(KEY_ADVANCED_SETTINGS_CATEGORY);
+
+        final boolean show_advancedsettingsCategory =
+        Utils.updatePreferenceToSpecificActivityFromMetaDataOrRemove(this.getActivity().getApplicationContext(),
+                    advancedsettingsCategory, KEY_ADVANCED_SETTINGS);
+
+        if (!show_advancedsettingsCategory) {
+			getPreferenceScreen().removePreference(advancedsettingsCategory);
+        }
 
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if (!VibratorIntensity.isSupported() || vibrator == null || !vibrator.hasVibrator()) {

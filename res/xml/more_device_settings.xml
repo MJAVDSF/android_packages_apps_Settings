@@ -62,4 +62,19 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="advanced_settings_category"
+        android:title="@string/advanced_settings_title" >
+
+        <PreferenceScreen
+             android:key="advanced_settings"
+             android:title="@string/advanced_settings_title">
+             <intent
+                  android:targetPackage="com.cyanogenmod.settings.device"
+                  android:action="com.cyanogenmod.action.LAUNCH_DEVICE_SETTINGS"
+                  android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
