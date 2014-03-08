@@ -269,4 +269,9 @@
     <string name="custom_recent_title">Switch Recents styles</string>
     <string name="custom_recent_summary">Tick to Slim recents or untick for stock recents. TICKING OR UNTICKING THIS BOX WILL RESTART YOUR SYSTEMUI</string>
 
+    <!-- Lockscreen Lid Settings -->
+    <string name="smart_cover_category_title">Smart cover</string>
+    <string name="smart_cover_wake_title">Smart cover wake</string>
+    <string name="smart_cover_wake_summary">Wakeup device when smart cover opens</string>
+
 </resources>
