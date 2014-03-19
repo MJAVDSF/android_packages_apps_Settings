@@ -8,7 +8,7 @@
 
     <!-- General strings -->
     <string name="default_string">Default</string>
-    <string name="recents_panel_settings_title" >Recents panel settings</string>
+    <string name="recent_panel_settings_title" >Recent panel settings</string>
     <string name="reset">Reset</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
@@ -118,17 +118,17 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
-    <!-- Recents Ram Bar -->
-    <string name="ram_bar">Recents RAM bar</string>
+    <!-- Recent Ram Bar -->
+    <string name="ram_bar">Recent RAM bar</string>
     <string name="ram_bar_note_title">Note</string>
     <string name="ram_bar_note_summary">This RAM bar shows the actual android memory (RAM) utilization. Please note that having cached apps helps your device open apps much faster.</string>
-    <string name="ram_bar_mode_title">Recents RAM bar mode</string>
-    <string name="ram_bar_mode_dialog_title">Show on recents RAM bar</string>
+    <string name="ram_bar_mode_title">Recent RAM bar mode</string>
+    <string name="ram_bar_mode_dialog_title">Show on recent RAM bar</string>
     <string name="ram_bar_none">None</string>
     <string name="ram_bar_apps">Applications</string>
     <string name="ram_bar_cache">Applications and cache</string>
     <string name="ram_bar_other">Applications, cache and other</string>
-    <string name="ram_bar_style_cat">Recents RAM bar style</string>
+    <string name="ram_bar_style_cat">Recent RAM bar style</string>
     <string name="ram_bar_color_app_mem_color">Applications RAM color</string>
     <string name="ram_bar_color_cache_mem_color">Cache RAM color</string>
     <string name="ram_bar_color_total_mem_color">Other RAM color</string>
@@ -274,8 +274,8 @@
     <string name="smart_pulldown_persistent">Persistent</string>
 
     <!-- Custom Recent Settings -->
-    <string name="custom_recent_title">Switch Recents styles</string>
-    <string name="custom_recent_summary">Tick to Slim recents or untick for stock recents. TICKING OR UNTICKING THIS BOX WILL RESTART YOUR SYSTEMUI</string>
+    <string name="custom_recent_title">Switch Recent styles</string>
+    <string name="custom_recent_summary">Tick to Slim recent or untick for stock recent. TICKING OR UNTICKING THIS BOX WILL RESTART YOUR SYSTEMUI</string>
 
     <!-- Lockscreen Lid Settings -->
     <string name="smart_cover_category_title">Smart cover</string>
@@ -337,26 +337,26 @@
 
     <!-- NavBar long press actions -->
     <string name="navbar_long_press_title">Long press actions</string>
-    <string name="recents_long_press_title">Recents long press actions</string>
-    <string name="recents_long_press_none">None</string>
-    <string name="recents_long_press_last_app">Last app</string>
-    <string name="recents_long_press_screenshot">Screenshot</string>
-    <string name="recents_long_press_kill_app">Kill app</string>
-    <string name="recents_long_press_notif_panel">Notifications panel</string>
-    <string name="recents_long_press_qs_panel">QS panel</string>
-    <string name="recents_long_press_power_menu">Power menu</string>
+    <string name="recent_long_press_title">Recent long press actions</string>
+    <string name="recent_long_press_none">None</string>
+    <string name="recent_long_press_last_app">Last app</string>
+    <string name="recent_long_press_screenshot">Screenshot</string>
+    <string name="recent_long_press_kill_app">Kill app</string>
+    <string name="recent_long_press_notif_panel">Notifications panel</string>
+    <string name="recent_long_press_qs_panel">QS panel</string>
+    <string name="recent_long_press_power_menu">Power menu</string>
 
     <!-- Recent panel -->
-    <string name="recent_panel_category">Recent apps panel</string>
+    <string name="slim_recent_panel_category">Slim recent apps panel</string>
     <string name="recent_panel_scale_title">Size</string>
-    <string name="recent_panel_scale_summary">Recent apps panel size in percent.</string>
+    <string name="recent_panel_scale_summary">Recent apps panel size in percent</string>
     <string name="recent_panel_100">100% (default)</string>
     <string name="recent_panel_85">85%</string>
     <string name="recent_panel_70">70%</string>
 
     <!-- ATTENTION: RTL languages need to replace left with right -->
     <string name="recent_panel_lefty_mode_title">Show on the left edge</string>
-    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge.</string>
+    <string name="recent_panel_lefty_mode_summary">Show recent apps panel on the left edge</string>
 
     <!-- Notifications light with screen on -->
     <string name="notification_light_screen_on_title">Show when screen is on</string>

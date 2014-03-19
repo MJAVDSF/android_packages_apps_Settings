@@ -60,25 +60,25 @@ public class NavBarLongPressActions extends SettingsPreferenceFragment implement
 
         if (value == 0) {
             Settings.System.putInt(cr, Settings.System.NAVBAR_RECENTS_LONG_PRESS, 0);
-            summary = R.string.recents_long_press_none;
+            summary = R.string.recent_long_press_none;
         } else if (value == 1) {
             Settings.System.putInt(cr, Settings.System.NAVBAR_RECENTS_LONG_PRESS, 1);
-            summary = R.string.recents_long_press_last_app;
+            summary = R.string.recent_long_press_last_app;
         } else if (value == 2) {
             Settings.System.putInt(cr, Settings.System.NAVBAR_RECENTS_LONG_PRESS, 2);
-            summary = R.string.recents_long_press_screenshot;
+            summary = R.string.recent_long_press_screenshot;
         } else if (value == 3) {
             Settings.System.putInt(cr, Settings.System.NAVBAR_RECENTS_LONG_PRESS, 3);
-            summary = R.string.recents_long_press_kill_app;
+            summary = R.string.recent_long_press_kill_app;
         } else if (value == 4) {
             Settings.System.putInt(cr, Settings.System.NAVBAR_RECENTS_LONG_PRESS, 4);
-            summary = R.string.recents_long_press_notif_panel;
+            summary = R.string.recent_long_press_notif_panel;
         } else if (value == 5) {
             Settings.System.putInt(cr, Settings.System.NAVBAR_RECENTS_LONG_PRESS, 5);
-            summary = R.string.recents_long_press_qs_panel;
+            summary = R.string.recent_long_press_qs_panel;
         } else if (value == 6) {
             Settings.System.putInt(cr, Settings.System.NAVBAR_RECENTS_LONG_PRESS, 6);
-            summary = R.string.recents_long_press_power_menu;
+            summary = R.string.recent_long_press_power_menu;
         }
 
         if (mRecentsLongPress != null && summary != -1) {
