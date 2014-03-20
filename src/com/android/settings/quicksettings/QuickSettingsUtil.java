@@ -46,7 +46,8 @@ import static com.android.internal.util.cm.QSConstants.TILE_VOLUME;
 import static com.android.internal.util.cm.QSConstants.TILE_WIFI;
 import static com.android.internal.util.cm.QSConstants.TILE_WIFIAP;
 import static com.android.internal.util.cm.QSConstants.TILE_POWER;
-import static com.android.internal.util.cm.QSConstants.TILE_THEME;  
+import static com.android.internal.util.cm.QSConstants.TILE_THEME;
+import static com.android.internal.util.cm.QSConstants.TILE_ONTHEGO;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -160,7 +161,10 @@ public class QuickSettingsUtil {
                 "com.android.systemui:drawable/ic_qs_powermenu"));
         registerTile(new QuickSettingsUtil.TileInfo(
                 TILE_THEME, R.string.title_tile_theme,
-                "com.android.systemui:drawable/ic_qs_theme_manual"));    
+                "com.android.systemui:drawable/ic_qs_theme_manual"));
+        registerTile(new QuickSettingsUtil.TileInfo(
+                TILE_ONTHEGO, R.string.title_tile_onthego,
+                "com.android.systemui:drawable/ic_qs_onthego"));
     }
 
     private static void registerTile(QuickSettingsUtil.TileInfo info) {
@@ -216,6 +220,7 @@ public class QuickSettingsUtil {
         // Don't show the Camera tile if the device has no cameras
         if (!QSUtils.deviceSupportsCamera()) {
             removeTile(TILE_CAMERA);
+            removeTile(TILE_ONTHEGO);
         }
 
         // Don't show the performance profiles tile if is not available for the device
