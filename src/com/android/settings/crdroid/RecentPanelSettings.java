@@ -43,6 +43,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment implements O
     // Slim recent
     private static final String RECENT_PANEL_LEFTY_MODE = "recent_panel_lefty_mode";
     private static final String RECENT_PANEL_SCALE = "recent_panel_scale";
+    private static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int MENU_HELP = MENU_RESET + 1; 
@@ -61,6 +62,7 @@ public class RecentPanelSettings extends SettingsPreferenceFragment implements O
     // Slim recent
     private CheckBoxPreference mRecentPanelLeftyMode;
     private ListPreference mRecentPanelScale;
+    private ListPreference mRecentPanelExpandedMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -127,6 +129,9 @@ public class RecentPanelSettings extends SettingsPreferenceFragment implements O
         mRecentPanelLeftyMode.setOnPreferenceChangeListener(this);
         mRecentPanelScale = (ListPreference) findPreference(RECENT_PANEL_SCALE);
         mRecentPanelScale.setOnPreferenceChangeListener(this);
+
+        mRecentPanelExpandedMode = (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
+        mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
 
         updateRecentsOptions();
         setHasOptionsMenu(true);
@@ -222,6 +227,11 @@ public class RecentPanelSettings extends SettingsPreferenceFragment implements O
             Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_PANEL_SCALE_FACTOR, value);
             return true;
+        } else if (preference == mRecentPanelExpandedMode) {
+            int value = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.RECENT_PANEL_EXPANDED_MODE, value);
+            return true;
         } else if (preference == mRecentPanelLeftyMode) {
             Settings.System.putInt(getContentResolver(),
                     Settings.System.RECENT_PANEL_GRAVITY,
@@ -264,6 +274,9 @@ public class RecentPanelSettings extends SettingsPreferenceFragment implements O
         final int recentScale = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_SCALE_FACTOR, 100);
         mRecentPanelScale.setValue(recentScale + "");
+        final int recentExpandedMode = Settings.System.getInt(getContentResolver(),
+                Settings.System.RECENT_PANEL_EXPANDED_MODE, 0);
+        mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
 
         if (recentsStyle) {
             mRecentClearAll.setEnabled(false);
