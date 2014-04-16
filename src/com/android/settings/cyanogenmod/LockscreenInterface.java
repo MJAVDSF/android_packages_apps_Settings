@@ -270,6 +270,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MODLOCK_ENABLED,
                     value ? 1 : 0);
+            // force it so update picks up correct values
+            ((CheckBoxPreference) preference).setChecked(value);
+            updateAvailableModLockPreferences();
             return true;
         } else if (preference == mDisableFrame) {
             Settings.System.putInt(getContentResolver(),
@@ -295,8 +298,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
      * provided preference if so.
      * @param preference Preference
      * @param feature Feature
+     * @return True if disabled.
      */
-    private void checkDisabledByPolicy(Preference preference, int feature) {
+    private boolean checkDisabledByPolicy(Preference preference, int feature) {
         boolean disabled = featureIsDisabled(feature);
 
         if (disabled) {
@@ -304,6 +308,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         }
 
         preference.setEnabled(!disabled);
+        return disabled;
     }
 
     /**
