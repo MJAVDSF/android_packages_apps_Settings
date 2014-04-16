@@ -64,6 +64,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private static final String KEY_ENABLE_WIDGETS = "keyguard_enable_widgets";
     private static final String KEY_LOCK_CLOCK = "lock_clock";
     private static final String KEY_ENABLE_CAMERA = "keyguard_enable_camera";
+    private static final String KEY_ENABLE_MAXIMIZE_WIGETS = "lockscreen_maximize_widgets";
     private static final String LOCKSCREEN_BACKGROUND_STYLE = "lockscreen_background_style";
     private static final String KEY_LOCKSCREEN_MODLOCK_ENABLED = "lockscreen_modlock_enabled";
     private static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
@@ -76,6 +77,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
     private CheckBoxPreference mEnableKeyguardWidgets;
     private CheckBoxPreference mEnableCameraWidget;
     private CheckBoxPreference mEnableModLock;
+    private CheckBoxPreference mEnableMaximizeWidgets;
     private ListPreference mLockBackground;
     private ListPreference mBatteryStatus;
     private CheckBoxPreference mLockBeforeUnlock;
@@ -105,6 +107,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         // Find preferences
         mEnableKeyguardWidgets = (CheckBoxPreference) findPreference(KEY_ENABLE_WIDGETS);
         mEnableCameraWidget = (CheckBoxPreference) findPreference(KEY_ENABLE_CAMERA);
+        mEnableMaximizeWidgets = (CheckBoxPreference) findPreference(KEY_ENABLE_MAXIMIZE_WIGETS);
 
         mEnableModLock = (CheckBoxPreference) findPreference(KEY_LOCKSCREEN_MODLOCK_ENABLED);
         if (mEnableModLock != null) {
@@ -123,10 +126,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         if (!hasButtons()) {
             generalCategory.removePreference(findPreference(KEY_LOCKSCREEN_BUTTONS));
         }
-
-        // Enable or disable lockscreen widgets based on policy
-        checkDisabledByPolicy(mEnableKeyguardWidgets,
-                DevicePolicyManager.KEYGUARD_DISABLE_WIDGETS_ALL);
 
         // Lock before Unlock
         mLockBeforeUnlock = (CheckBoxPreference) findPreference(LOCK_BEFORE_UNLOCK);
@@ -162,7 +161,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         // Remove maximize widgets on tablets
         if (!Utils.isPhone(getActivity())) {
             widgetsCategory.removePreference(
-                    findPreference(Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS));
+                    mEnableMaximizeWidgets);
         }
 
         mLockBackground = (ListPreference) findPreference(LOCKSCREEN_BACKGROUND_STYLE);
@@ -210,6 +209,25 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements
         }
 
         updateBackgroundPreference();
+        updateAvailableModLockPreferences();
+    }
+
+    private void updateAvailableModLockPreferences() {
+        if (mEnableModLock == null) {
+            return;
+        }
+
+        boolean enabled = !mEnableModLock.isChecked();
+        if (mEnableKeyguardWidgets != null) {
+            // Enable or disable lockscreen widgets based on policy
+            if(!checkDisabledByPolicy(mEnableKeyguardWidgets,
+                    DevicePolicyManager.KEYGUARD_DISABLE_WIDGETS_ALL)) {
+                mEnableKeyguardWidgets.setEnabled(enabled);
+            }
+        }
+        if (mEnableMaximizeWidgets != null) {
+            mEnableMaximizeWidgets.setEnabled(enabled);
+        }
     }
 
     private void updateBackgroundPreference() {
