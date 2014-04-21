@@ -3,8 +3,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- About phone screen, DCM version -->
-    <string name="crdroid_version_title">DarkCyanogenMod Version</string>
-    <string name="crdroid_version_default">2.0</string>
+    <string name="dcm_version_title">DarkCyanogenMod Version</string>
+    <string name="dcm_version_default">2.0</string>
 
     <!-- General strings -->
     <string name="default_string">Default</string>
