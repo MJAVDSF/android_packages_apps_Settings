@@ -24,10 +24,4 @@
         <attr name="unitsRight" format="string|reference" />
     </declare-styleable>
 
-    <declare-styleable name="NEWSeekBarPreference">
-        <attr name="maximum" format="integer" />
-        <attr name="minimum" format="integer" />
-        <attr name="interval" format="integer" />
-    </declare-styleable>
-
 </resources>
