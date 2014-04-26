@@ -558,4 +558,7 @@
     <!-- Sound volumes panel -->
     <string name="volume_keys_will_not_exit_silent_mode">Volume keys will not exit silent mode</string>
 
+    <!-- Double tap to sleep lockscreen option -->
+    <string name="lockscreen_double_tap_sleep_title">Double-tap to sleep</string>
+
 </resources>
