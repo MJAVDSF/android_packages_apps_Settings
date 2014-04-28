@@ -7,24 +7,24 @@
     <string name="dcm_version_default">2.0</string>
 
     <!-- General strings -->
-    <string name="default_string">Default</string>
+    <string name="default_string">پیش فرض</string>
     <string name="recent_panel_settings_title" >Recent panel settings</string>
-    <string name="reset">Reset</string>
-    <string name="enabled">Enabled</string>
-    <string name="disabled">Disabled</string>
+    <string name="reset">بازنشانی</string>
+    <string name="enabled">فعال</string>
+    <string name="disabled">غیرفعال</string>
 
     <!-- Advanced settings -->
-    <string name="advanced_options_settings_title">Advanced</string>
+    <string name="advanced_options_settings_title">تنظیمات پیشرفته</string>
 
     <!-- Halo -->
     <string name="halo_settings_title">Halo</string>
     <string name="halo_behavior_title">Halo Behavior</string>
-    <string name="halo_hide_title">Hide Halo after activity</string>
-    <string name="halo_hide_summary">Halo will appear for incoming tasks and scroll out of sight after a while</string>
-    <string name="halo_state_title">Halo policy</string>
+    <string name="halo_hide_title">مخفی کردن Halo پس از فعالیت</string>
+    <string name="halo_hide_summary">Halo برای کارهای ورودی ظاهر می شود و بعد در حالی که از نظر حرکت</string>
+    <string name="halo_state_title">Halo سیاست های</string>
     <string name="halo_state_summary">Enables black/white listing notifications</string>
-    <string name="halo_state_black">Black list</string>
-    <string name="halo_state_white">White list</string>
+    <string name="halo_state_black">لیست سیاه</string>
+    <string name="halo_state_white">لیست سفید</string>
     <string name="halo_pause_title">Pause active app</string>
     <string name="halo_pause_summary">When opening an app with Halo the underlying app will get paused</string>
     <string name="halo_notification_msgbox_title">Enable message pop-up</string>
@@ -41,20 +41,20 @@
     <string name="halo_size_gigantic">Gigantic</string>
     <string name="halo_size_monster">Monster</string>
 
-    <string name="halo_notification_count_title">Notification count</string>
-    <string name="halo_notification_count_summary">Display notification counts on Halo</string>
-    <string name="halo_notification_count_none">None</string>
-    <string name="halo_notification_count_total">Total</string>
-    <string name="halo_notification_count_individual">Per app</string>
-    <string name="halo_notification_count_both">Both</string>
+    <string name="halo_notification_count_title">شمارنده اطلاعیه ها</string>
+    <string name="halo_notification_count_summary">نمایش شمارنده اطلاعیه های Halo</string>
+    <string name="halo_notification_count_none">هیچ</string>
+    <string name="halo_notification_count_total">کل</string>
+    <string name="halo_notification_count_individual">در طول برنامه</string>
+    <string name="halo_notification_count_both">هر دو</string>
 
     <!-- Label for are-halo-notifications-allowed checkbox in app details [CHAR LIMIT=20] -->
-    <string name="app_halo_label_black">Blacklist from HALO</string>
-    <string name="app_halo_label_white">Whitelist from HALO</string>
+    <string name="app_halo_label_black">لیست های سیاه HALO</string>
+    <string name="app_halo_label_white">لیست های سفید HALO</string>
 
     <!-- QS and navring Power menu -->
-    <string name="title_tile_power">Power Menu</string> 
-    <string name="navring_action_power_menu">Power menu</string>       
+    <string name="title_tile_power">فهرست قدرت</string> 
+    <string name="navring_action_power_menu">فهرست قدرت</string>       
 
     <!-- Navigation bar -->
     <string name="navbar_enable_bar">Enable navigation bar</string>
@@ -346,18 +346,18 @@
     <!-- Notification Reminders -->
     <string name="noti_reminder_title">Notification reminder</string>
     <string name="noti_reminder_enable_title">Enable notification reminder</string>
-    <string name="noti_reminder_sound_title">Notify sound</string>
+    <string name="noti_reminder_sound_title">اطلاع با صد</string>
     <string name="noti_reminder_sound_looping">Until dismissed</string>
-    <string name="noti_reminder_ringtone">Notify ringtone</string>
+    <string name="noti_reminder_ringtone">اطلاع با صدا</string>
     <string name="noti_reminder_summary">Enter with a notification and set a reminder for the same</string>
     <string name="noti_reminder_interval">Flip interval</string>
-    <string name="noti_reminder_interval_1s">1 second</string>
-    <string name="noti_reminder_interval_1dot5s">1.5 seconds</string>
-    <string name="noti_reminder_interval_2s">2 seconds</string>
-    <string name="noti_reminder_interval_2dot5s">2.5 seconds</string>
-    <string name="noti_reminder_interval_3s">3 seconds</string>
-    <string name="noti_reminder_interval_3dot5s">3.5 second</string>
-    <string name="noti_reminder_interval_4s">4 seconds</string>
+    <string name="noti_reminder_interval_1s">1 ثانیه</string>
+    <string name="noti_reminder_interval_1dot5s">1.5 ثانیه</string>
+    <string name="noti_reminder_interval_2s">2 ثانیه</string>
+    <string name="noti_reminder_interval_2dot5s">2.5 ثانیه</string>
+    <string name="noti_reminder_interval_3s">3 ثانیه</string>
+    <string name="noti_reminder_interval_3dot5s">3.5 ثانیه</string>
+    <string name="noti_reminder_interval_4s">4 ثانیه</string>
 
     <!-- QuickSettings: Smart Pulldown -->
     <string name="smart_pulldown_title">Smart pulldown</string>
@@ -413,20 +413,20 @@
     <string name="telo_radio_go_3g_unlock_summary">When device is unlocked network mode switches to 3G again.</string>
     
     <!-- Volume Steps -->
-    <string name="volume_steps_title">Volume Steps</string>
+    <string name="volume_steps_title">مقدار صدا</string>
     <string name="volume_steps_60">60</string>
     <string name="volume_steps_45">45</string>
     <string name="volume_steps_30">30</string>
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
-    <string name="volume_steps_alarm_title">Alarm</string>
+    <string name="volume_steps_alarm_title">هشدار</string>
     <string name="volume_steps_dtmf_title">DTMF</string>
-    <string name="volume_steps_music_title">Music</string>
-    <string name="volume_steps_notification_title">Notification</string>
-    <string name="volume_steps_ring_title">Ringer</string>
-    <string name="volume_steps_system_title">System</string>
-    <string name="volume_steps_voice_call_title">Voice Call</string>
+    <string name="volume_steps_music_title">موسیقی</string>
+    <string name="volume_steps_notification_title">اطلاعیه ها</string>
+    <string name="volume_steps_ring_title">زنگ تلفن</string>
+    <string name="volume_steps_system_title">سیستم</string>
+    <string name="volume_steps_voice_call_title">تماس صوتی</string>
 
     <!-- NavBar long press actions -->
     <string name="navbar_long_press_title">Long press actions</string>
@@ -478,30 +478,30 @@
     <string name="lockscreen_widget_frame_summary">Disable widget background frames</string>
 
     <!-- Sound themes -->
-    <string name="sound_packages_title">Sound packs</string>
-    <string name="install_sound_pack_title">Install sound pack</string>
-    <string name="install_sound_pack_summary">Install new sound packs added in SoundPacks folder on the internal storage</string>
-    <string name="select_sound_pack_title">Select sound pack</string>
-    <string name="select_sound_pack_summary">Select the active sound pack</string>
-    <string name="default_sound_pack">Default (System)</string>
-    <string name="error_pack_install">Error while installing the sound pack</string>
+    <string name="sound_packages_title">بسته های صدا</string>
+    <string name="install_sound_pack_title">نصب بسته صدا</string>
+    <string name="install_sound_pack_summary">نصب بسته های صدا از حافظه داخلی</string>
+    <string name="select_sound_pack_title">انتخاب بسته صدا</string>
+    <string name="select_sound_pack_summary">انتخاب بسته های صدا خلاصه</string>
+    <string name="default_sound_pack">پیشفرض (سیستم) </string>
+    <string name="error_pack_install">خطا در هنگام نصب بسته های صوتی</string>
 
     <!-- Network usage stats -->
-    <string name="status_bar_network_cat">Network traffic meter</string>
-    <string name="status_bar_network_header">Network traffic meter</string>
-    <string name="status_bar_network_title">Network traffic</string>
-    <string name="status_bar_show_network_stats_title">Show network speeds</string>
-    <string name="status_bar_network_stats_update_title">Update frequency</string>
-    <string name="hide_network_speed">Hide when there is no traffic</string>
-    <string name="hide_network_speed_summary">Hide network stats indicator when there is no traffic</string>
+    <string name="status_bar_network_cat">اندازه گیری ترافیک شبکه</string>
+    <string name="status_bar_network_header">اندازه گیری ترافیک شبکه</string>
+    <string name="status_bar_network_title">ترافیک شبکه</string>
+    <string name="status_bar_show_network_stats_title">نمایش سرعت شبکه</string>
+    <string name="status_bar_network_stats_update_title">دوره به روز رسانی</string>
+    <string name="hide_network_speed">مخفی شدن در زمانی که ترافیکی نیست</string>
+    <string name="hide_network_speed_summary">مخفی کردن در زمانی که هیچ ترافیکی وجود ندارد</string>
 
     <!-- QuickSettings style options -->
-    <string name="quicksettings_tiles_style">Quick Settings style</string>
-    <string name="summary_quicksettings_tiles_style">Show or change Quick Settings style options</string>
-    <string name="quicksettings_tiles_style_additional_options">Additional options</string>
-    <string name="tiles_per_row_title">Tiles per row</string>
-    <string name="tiles_per_row_duplicate_landscape_title">Scale landscape quantity</string>
-    <string name="tiles_per_row_duplicate_landscape_summary">Landscape view doubles tiles per row quantity</string>
+    <string name="quicksettings_tiles_style">فهرست تنظیمات سریع</string>
+    <string name="summary_quicksettings_tiles_style">نمایش یا تغییر گزینه های فهرست سریع</string>
+    <string name="quicksettings_tiles_style_additional_options">گزینه های اضافی</string>
+    <string name="tiles_per_row_title">تعداد کاشی در هر ردیف</string>
+    <string name="tiles_per_row_duplicate_landscape_title">مقیاس دیداری</string>
+    <string name="tiles_per_row_duplicate_landscape_summary">نمایش کاشی ها در حالت افقی دو برابر باشد</string>
 
     <!-- Animation Controls -->
     <string name="title_animation_controls">Custom system animations</string>
@@ -541,24 +541,24 @@
     <string name="toast_SlideRightLeft_animation">Slide Right To Left Animation</string>
 
     <!-- Scrolling Cache -->
-    <string name="pref_scrollingcache_title">Scrolling cache</string>
-    <string name="pref_scrollingcache_summary">Scrolling cache may improve scrolling performance at the cost of memory</string>
-    <string name="pref_scrollingcache_force_enable">Force enable</string>
-    <string name="pref_scrollingcache_default_enable">Default enable</string>
-    <string name="pref_scrollingcache_default_disable">Default disable</string>
-    <string name="pref_scrollingcache_force_disable">Force disable</string>
+    <string name="pref_scrollingcache_title">پیشمایش کش</string>
+    <string name="pref_scrollingcache_summary">پیمایش کش ممکن است عملکرد پیمایش در هزینه از حافظه را بهبود بخشد</string>
+    <string name="pref_scrollingcache_force_enable">فعال کردن به زور</string>
+    <string name="pref_scrollingcache_default_enable">فعال کردن عادی</string>
+    <string name="pref_scrollingcache_default_disable">غیرفعال کردن عادی</string>
+    <string name="pref_scrollingcache_force_disable">غیرفعال کردن به زور</string>
 
     <!-- Lockscreen battery ring -->
-    <string name="battery_around_lockscreen_ring">Battery around unlock ring</string>
+    <string name="battery_around_lockscreen_ring">نشانگر باطری در حلقه صفحه قفل</string>
 
     <!-- QuickSettings fliptiles -->
-    <string name="flip_qs_tiles_title">Flip tiles</string>
-    <string name="flip_qs_tiles_summary">Flips the tiles on touch</string>
+    <string name="flip_qs_tiles_title">چرخش کاشی ها</string>
+    <string name="flip_qs_tiles_summary">چرخش کاشی ها پس از لمس</string>
 
     <!-- Sound volumes panel -->
     <string name="volume_keys_will_not_exit_silent_mode">Volume keys will not exit silent mode</string>
 
     <!-- Double tap to sleep lockscreen option -->
-    <string name="lockscreen_double_tap_sleep_title">Double-tap to sleep</string>
+    <string name="lockscreen_double_tap_sleep_title">دوبار لمس برای رفتن به خواب</string>
 
 </resources>
